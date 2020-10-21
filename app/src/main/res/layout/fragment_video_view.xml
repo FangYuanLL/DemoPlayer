@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Surface_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoViewFragment">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal"
+       android:id="@+id/linearLayout"
+       android:focusable="true">
+
+      <SurfaceView
+          android:id="@+id/surface_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+
+         <ProgressBar
+             android:id="@+id/load_bar"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_gravity="center"
+             android:layout_marginTop="250dp" />
+
+         <LinearLayout
+             android:id="@+id/process_label"
+             android:layout_width="match_parent"
+             android:layout_height="100dp"
+             android:layout_marginTop="150dp">
+            <TextView
+                android:id="@+id/current_time"
+                android:text="00:00:00"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"/>
+
+            <SeekBar
+                android:id="@+id/process_bar"
+                android:layout_width="650dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:id="@+id/total_time"
+                android:text="00:00:00"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"/>
+
+         </LinearLayout>
+
+      </LinearLayout>
+
+   </RelativeLayout>
+
+</FrameLayout>
